@@ -5,7 +5,6 @@ export class List extends Component {
         super(props);
     }
 
-
     render() {
         let { items, tasks, deleteCurrentTask } = this.props;
         return (
@@ -18,9 +17,9 @@ export class List extends Component {
                         style={{
                             listStyleType: "none",
                             display: "inline-block",
-                            textDecoration: task.status === "deleted" ? "line-through" : "none" 
+                            textDecoration: task.item.status === "deleted" ? "line-through" : "none" 
                         }}
-                        key={index}>{task}
+                        key={index}>{task.item.text}
                         </li>
                         <button 
                         style={{

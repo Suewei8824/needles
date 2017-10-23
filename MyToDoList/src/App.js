@@ -14,19 +14,25 @@ class App extends Component {
   }
 
   addItem(task) {
+    const item = {
+      text: task,
+      status: "active"
+    }
     this.setState(
-      {items:　this.state.items.concat(task)}
+      {items:　this.state.items.concat({item})}
     )
+    console.log(this.state.items);
   }
 
   deleteCurrentTask(index) {
-    this.state.items.splice(index, 1)
-    //this.items[index].status = "deleted";
+    //this.state.items.splice(index, 1)
+    this.state.items[index].item.status = "deleted";
+
     this.setState(
       {items: this.state.items}
     )
-    console.log(index);
-    console.log(this.state.items);
+    // console.log(index);
+    // console.log(this.state.items);
   }
 
   render() {
