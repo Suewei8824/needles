@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    height: 400px;
+    width: 450px;
+    border: 1px solid #ddd;
+    margin: 200px auto;
+    background: url("/static/assets/mail-robot.png") no-repeat;
+    background-position: center;
+    background-size: 30%;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    background-position-y: 38%;
+    background-position-x: 54%;
+}
+
+.txt {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.img {
+    width: 150px;
+}
+
+.input {
+    width: 280px;
+    height: 34px;
+    outline: none;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.inputpage {
+    width: 450px;
+}
+
+.btn {
+    width: 60px;
+    height: 34px;
+    margin: 64px 0 0 305px;
+    color: #fff;
+    background-color: #3e74e8;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.showtext {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px;
+}
+
+.getemail {
+    color: #3e74e8;
+}

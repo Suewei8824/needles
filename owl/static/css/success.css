@@ -1,0 +1,42 @@
+.container {
+    position: fixed;
+    display: flex;
+    height: 36px;
+    width: 100%;
+    top: 48%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip{
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+}
+
+.img-wrapper {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    margin-right: 18px;    
+}
+
+.img {
+    width: 22px;
+}
+
+.send {
+    text-align: center;
+    width: 180px;
+    height: 30px;
+    font-size: 18px;
+    margin-left: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 2048px) {
+    body {
+        zoom: 120%;
+    }
+}

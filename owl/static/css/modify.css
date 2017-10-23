@@ -1,0 +1,137 @@
+.container {
+    position: fixed;
+    width: 700px;
+    height: 510px;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -260px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px #ccc;
+}
+
+.sidebar {
+    width: 150px;
+    height: 510px;
+    border-right: 1px solid #ccc;
+    display: inline-block;
+}
+
+.sidebar > div {
+    width: 150px; 
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.wrapper {
+    width: 500px;
+    height: 440px;
+    float: right;
+}
+
+.userdiv {
+    display: flex;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+}
+.userlogo {
+    display: flex;
+    margin: 0 auto;
+    width: 80px;
+}
+
+.profilecard, .passwordcard {
+    position: absolute;
+    top: 270px;
+    width: 400px;
+    top: 30%;
+}
+
+.desc {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+.form input {
+    font-size: 14px;
+    width: 280px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px #ccc;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.tips {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: -30px;
+    transform: translateX(100%);
+    background-color: rgb(228, 0, 5);
+    box-shadow: 0 0 25px rgba(228, 0, 5, .3);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 6px 14px;
+}
+
+.tips em {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -15px;
+    border: 8px solid rgb(228, 0, 5);
+    border-color: transparent;
+    border-right-color: rgb(228, 0, 5);
+    font-size: 0;
+    line-height: 0;
+}
+
+.border {
+    height: 1px;
+    background-color: #f2f2f2;
+    margin: 10px 0;
+}
+
+.submit {
+    outline: none;
+    background-color: #0f68ed;
+    color: #fff;
+    width: 76px;
+    height: 34px;
+    border: none;
+    font-size: 14px;
+    border-radius: 3px;
+    float: float;
+    margin-top: 8px;
+    margin-left: 109px;
+    cursor: pointer;
+}
+.tipText {
+    font-size: 12px;
+    text-align: center;
+    width: 260px;
+    height: 30px;
+    margin-top: 80px;
+    color: #aaa;
+}
+
+.hide {
+    display: none;
+}
+
+.selected {
+    border-left: 2px solid #000;
+    font-weight: bold;
+}

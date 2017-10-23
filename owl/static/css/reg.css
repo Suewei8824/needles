@@ -1,0 +1,109 @@
+.container {
+    position: fixed;
+    width: 500px;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -370px;
+}
+
+#video {
+    user-select: none;
+}
+
+.inputarea {
+    position: absolute;
+    top: 270px;
+    width: 260px;
+    left: 50%;
+    margin-left: -130px;
+}
+
+.form {
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 4px 10px 45px rgba(200, 200, 200, .4);
+    transition: box-shadow .5s;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+}
+
+.form:hover {
+    box-shadow: 4px 10px 45px rgba(200, 200, 200, .5);
+}
+
+.form input {
+    font-size: 14px;
+    border: none;
+    outline: none;
+    font-weight: 300;
+}
+
+.tips {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: -30px;
+    transform: translateX(100%);
+    background-color: rgb(228, 0, 5);
+    box-shadow: 0 0 25px rgba(228, 0, 5, .3);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 6px 14px;
+}
+
+.tips em {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -15px;
+    border: 8px solid rgb(228, 0, 5);
+    border-color: transparent;
+    border-right-color: rgb(228, 0, 5);
+    font-size: 0;
+    line-height: 0;
+}
+
+.border {
+    height: 1px;
+    background-color: #f2f2f2;
+    margin: 10px 0;
+}
+
+.submit {
+    outline: none;
+    background-color: #0f68ed;
+    color: #fff;
+    width: 260px;
+    height: 34px;
+    border: none;
+    font-size: 14px;
+    border-radius: 3px;
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.submit.success {
+    background-color: #00a854;
+    color: #fff;
+}
+
+.tipText {
+    font-size: 12px;
+    text-align: center;
+    width: 260px;
+    height: 30px;
+    margin-top: 80px;
+    color: #aaa;
+}
+
+@media screen and (min-width: 2048px) {
+    body {
+        zoom: 120%;
+    }
+}
