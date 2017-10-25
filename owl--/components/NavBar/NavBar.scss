@@ -1,0 +1,35 @@
+.nav {
+    height: 60px;
+    border-bottom: 1px solid #dfdfdf;
+    background: #fff;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+
+    & > div {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+
+    .icon {
+        width: 28px;
+    }
+    .line {
+        border: 0.5px solid #ddd;
+        height: 80%;
+        margin: 0 20px;
+    }
+}
