@@ -18,6 +18,7 @@
     width: 112px;
     display: inline-block;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .navimg {

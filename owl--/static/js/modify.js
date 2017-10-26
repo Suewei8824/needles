@@ -192,6 +192,13 @@ function postPass(oldpass, newpass, confirm) {
     })
 }
 
+function judgeHost() {
+    window.location.host.indexOf("alpha-") > -1 ?
+    window.location.href = "//alpha-owl.aidigger.com"
+    :
+    window.location.href = "//owl.aidigger.com"
+}
+
 /*
 md5.js
 */
