@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="//cdn.aidigger.com/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/static/css/common.css">
-    <link rel="stylesheet" href="/static/css/modify.css">
-    <title>Eigen - Modify</title>
+    <link rel="stylesheet" href="/static/css/addpwd.css">
+    <title>Eigen - Reset</title>
 </head>
 
 <body>
@@ -21,71 +21,25 @@
         </div>
     </nav>
     <div class="container">
-        <div class="sidebar">
-            <div class="modify-prof selected">修改用户资料</div>
-            <div class="modify-pass">修改密码</div>
+        <div class="txt">
+            <span>重置密码</span>
         </div>
-        <div class="wrapper">
-            <div class="userdiv">
-                <img class="userlogo" src="/static/assets/Avatar.png" />
-                <p class="useremail"></p>
-            </div>
-            <div class="profilecard">
-                <div>
-                    <div class="form">
-                        <div style="margin: 20px 0">
-                            <div class="desc">
-                                <span style="padding-left: 60px">姓名</span>
-                            </div>
-                            <input type="text" name="realname" class="profile">
-                        </div>
-                        <div style="margin: 20px 0">
-                            <div style="
-                                        display: inline-block;
-                                        width: 50px;
-                                        height: 30px;
-                                        padding: 0 5px 0 51px;">用户ID
-                            </div>
-                            <input type="text" name="username" class="profile">
-                        </div>
-                        <div class="tips">
-                            <em></em>
-                            <span class="target"></span>
-                        </div>
-                    </div>
+        <div style="margin-left: 30px">
+            <div style="margin-top: 130px">
+                <div class="desc">
+                    <span style="padding-left: 48px">新密码</span>
                 </div>
-                <button class="submit-profile submit _submit opacity" disabled>提交</button>
+                <input type="password" name="newpass" class="pwd">
             </div>
-            <div class="passwordcard hide">
-                <div>
-                    <div class="form">
-                        <div style="margin: 20px 0">
-                            <div class="desc">
-                                <span style="padding-left: 16px">输入原密码</span>
-                            </div>
-                            <input type="password" name="oldpass" class="pwd">
-                        </div>
-                        <div style="margin: 20px 0">
-                            <div class="desc">
-                                <span style="padding-left: 48px">新密码</span>
-                            </div>
-                            <input type="password" name="newpass" class="pwd">
-                        </div>
-                        <div style="margin: 20px 0">
-                            <div class="desc">再次输入密码</div>
-                            <input type="password" name="confirm" class="pwd">
-                        </div>
-                        <div class="tips">
-                            <em></em>
-                            <span class="target"></span>
-                        </div>
-                    </div>
-                </div>
-                <button class="submit-password submit_ submit opacity" disabled>提交</button>
+            <div style="margin-top: 10px">
+                <div class="desc">再次输入密码</div>
+                <input type="password" name="confirm" class="pwd">
             </div>
+            <button class="submit">提交</button>
         </div>
-        <script src="//cdn.aidigger.com/jquery/3.1.1/jquery.min.js"></script>
-        <script src="/static/js/modify.js"></script>
+    </div>
+    <script src="//cdn.aidigger.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/static/js/addpwd.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,116 @@
+.nav {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navhead {
+    width: 2000px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.navhref {
+    width: 112px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navimg {
+    height: 18px;
+    line-height: 28px;
+    color: #3e74e8;
+}
+
+.container {
+    display: flex;
+    height: 400px;
+    width: 500px;
+    border: 1px solid #ddd;
+    margin: 200px auto;
+    background: url("/static/assets/mail-robot.png") no-repeat;
+    background-position: center;
+    background-size: 30%;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    background-position-y: 38%;
+    background-position-x: 54%;
+}
+
+.txt {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.img {
+    width: 150px;
+}
+
+.input {
+    width: 280px;
+    height: 34px;
+    outline: none;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.inputpage {
+    width: 450px;
+}
+
+.btn {
+    width: 60px;
+    height: 34px;
+    margin: 64px 0 0 305px;
+    color: #fff;
+    background-color: #3e74e8;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.desc {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+.pwd {
+    font-size: 14px;
+    width: 280px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px #ccc;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.submit {
+    outline: none;
+    background-color: #0f68ed;
+    color: #fff;
+    width: 76px;
+    height: 34px;
+    border: none;
+    font-size: 14px;
+    border-radius: 3px;
+    float: float;
+    margin-top: 8px;
+    margin-left: 109px;
+    cursor: pointer;
+}
