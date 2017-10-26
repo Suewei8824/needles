@@ -25,9 +25,32 @@ $(".modify-pass").click(function () {
  * Modify profile
  */
 
-$(".input[name=profile]").bind(function () {
+//btn change
+var textChangeHandlerProfile = function(e){
+    
+    var realname = $("input[name=realname]").val();
+    var username = $("input[name=username]").val();
 
-})
+    var submitBtn = $("._submit").first();
+
+    if(submitBtn){
+        if(realname || username){
+            submitBtn.removeClass('opacity');
+            submitBtn.attr('disabled', false);
+        }
+        else{
+            submitBtn.addClass('opacity');
+            submitBtn.attr('disabled', true);
+        }        
+    }
+    else{
+        console.log('get btn failed');
+    }
+}
+
+ $("input[name=realname]").first().bind('input', textChangeHandlerProfile);
+ $("input[name=username]").first().bind('input', textChangeHandlerProfile);
+
 
 $("._submit").click(function () {
     var realname = $("input[name=realname]").val();
@@ -69,7 +92,7 @@ function getProfile() {
         dataType: "json",
         success : function(res) {
             $("input[name=realname]").val(res.realname);
-            $(".useremail").text(res.email);
+            //$(".useremail").text(res.email);
             $("input[name=username]").val(res.username);
             olduser = res;
         },
@@ -108,29 +131,39 @@ function showTips(tips) {
  * Modify Password
  */
 
-var oldpass = $("input[name=oldpass]").val();
-var newpass = $("input[name=newpass]").val();
-var confirm = $("input[name=confirm]").val();
+//btn change
+var textChangeHandler = function(e){
+    
+    var oldpass = $("input[name=oldpass]").val();
+    var newpass = $("input[name=newpass]").val();
+    var confirm = $("input[name=confirm]").val();
+    var submitBtn = $(".submit_").first();
 
- $(".input[name=pwd]").change(function () {
-      if(oldpass && newpass && confirm) {
-      var submit = $(".submit_").removeClass("opacity");
-     }
- })
+    if(submitBtn){
+        if(oldpass && newpass && confirm){
+            submitBtn.removeClass('opacity');
+            submitBtn.attr('disabled', false);
+        }
+        else{
+            submitBtn.addClass('opacity');
+            submitBtn.attr('disabled', true);
+        }        
+    }
+    else{
+        console.log('get btn failed');
+    }
+}
 
+ $("input[name=oldpass]").first().bind('input', textChangeHandler);
+ $("input[name=newpass]").first().bind('input', textChangeHandler);
+ $("input[name=confirm]").first().bind('input', textChangeHandler);
 
 $(".submit_").click(function () {
     var oldpass = $("input[name=oldpass]").val();
     var newpass = $("input[name=newpass]").val();
     var confirm = $("input[name=confirm]").val();
 
-    if(!oldpass) {
-        showTips("请输入原密码！");
-    } else if(!newpass) {
-        showTips("请输入新密码！");
-    } else if(!confirm) {
-        showTips("请再次输入密码！");
-    } else if(newpass != confirm) {
+    if(newpass != confirm) {
         showTips("两次密码不一致！");
         $("input[name=newpass]").val("");
         $("input[name=confirm]").val("");
