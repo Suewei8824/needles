@@ -18,9 +18,17 @@
             <a class="navhref" onclick="judgeHost()">
                 <img src="../static/assets/labs.png" class="navimg" />
             </a>
-
         </div>
+        <img src="./static/assets/avatar.jpg" class="mavatar" onclick="dropDownMenu()"/>
     </nav>
+    <div class="dropdown hide">
+        <div class="avatar"></div>
+        <div class="name"></div>
+        <ul class="ul">
+            <li class="li" onClick="clickSet()">设置</li>
+        </ul>
+        <div class="footer" onClick="LogOut()">退出</div>
+    </div >
     <div class="container">
         <div class="sidebar">
             <div class="modify-prof selected">修改用户资料</div>

@@ -1,14 +1,15 @@
+/* navbar style */
 .nav {
     height: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     border-bottom: 1px solid #ddd;
 }
 
 .navhead {
-    width: 2000px;
+    width: 112px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -27,14 +28,98 @@
     color: #3e74e8;
 }
 
+.mavatar {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: -webkit-linear-gradient(top, #7990c2, #8ba3d2);
+    background-image: url('./avatar.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.dropdown {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    width: 290px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    float: right;
+    position: relative;
+    z-index: 99999;
+}
+
+.avatar {
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url('../assets/avatar.jpg') no-repeat center;
+    background-size: contain;
+    flex-shrink: 0;
+    margin: 20px auto 0 auto;
+}
+
+.name {
+    color: #637282;
+    line-height: 20px;
+    font-size: 16px;
+    margin: 14px 0;
+    text-align: center;
+    width: 290px;
+}
+
+.ul {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 18px 0 0 18px;
+    padding-right: 18px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    width: "100%";
+    list-style: "none";
+}
+
+.ul > .li {
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: #637282; 
+    list-style: none;
+}
+
+.footer {
+    cursor: pointer;
+    font-size: 14px;
+    color: #637282;
+    box-sizing: border-box;
+    padding: 18px 0 18px 18px;
+    width: "100%"
+}
+
+/* container style */
 .container {
     display: flex;
     width: 700px;
     height: 510px;
     border: 1px solid #ddd;
-    margin: 200px auto;
     border-radius: 4px;
     box-shadow: 0 1px 4px #ccc;
+    position: fixed;
+    top: 20%;
+    left: 32%;
+    background: #fff;
 }
 
 .sidebar {
