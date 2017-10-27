@@ -4,42 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="//cdn.aidigger.com/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="//cdn.aidigger.com/favicon.ico" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/static/css/common.css">
-    <link rel="stylesheet" href="/static/css/addpwd.css">
-    <title>Eigen - Reset</title>
+    <link rel="stylesheet" href="/static/css/reg.css">
+    <title>Eigen - Register</title>
 </head>
 
 <body>
-    <nav class="nav">
-        <div class="navhead">
-            <a class="navhref" onclick="judgeHost()">
-                <img src="../static/assets/labs.png" class="navimg" />
-            </a>
-        </div>
-    </nav>
     <div class="container">
-        <div class="txt">
-            <span>重置密码</span>
-        </div>
-        <div style="margin-left: 30px">
-            <div style="margin-top: 130px">
-                <div class="desc">
-                    <span style="padding-left: 48px">新密码</span>
+        <video id="video" width="500" src="/static/assets/logo.mp4" preload="auto" autoplay="autoplay"></video>
+        <div class="inputarea">
+            <div class="form">
+                <input type="email" placeholder="注册邮箱" name="email">
+                    <div class="border"></div>
+                <input type="text" placeholder="用户名" name="username">
+                <div class="border"></div>
+                <input type="text" placeholder="真实姓名" name="realname">
+                <div class="border"></div>
+                <input type="password" placeholder="邀请码" name="key">
+                <div class="border"></div>
+                <input type="password" placeholder="密码" name="pass">
+                <div class="border"></div>
+                <input type="password" placeholder="再次输入密码" name="passAgain">
+                <div class="tips">
+                    <em></em>
+                    <span class="target"></span>
                 </div>
-                <input type="password" name="newpass" class="pwd">
             </div>
-            <div style="margin-top: 10px">
-                <div class="desc">再次输入密码</div>
-                <input type="password" name="confirm" class="pwd">
+            <button class="submit">注册</button>
+            <div class="tipText">
+                <span>注册即表示你同意我们的使用条款。</span>
             </div>
-            <button class="submit">提交</button>
         </div>
     </div>
     <script src="//cdn.aidigger.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/static/js/addpwd.js"></script>
+    <script src="/static/js/reg.js"></script>
 </body>
 
 </html>

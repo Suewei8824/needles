@@ -3,15 +3,18 @@ $("input").bind('keypress', function (e) {
         var username = $("input[name=username]").val();    
         var email = $("input[name=email]").val();
         var realname = $("input[name=realname]").val();
+        var key = $("input[name=key").val();
         var password = $("input[name=pass]").val();
         var passwordAgain = $("input[name=passAgain]").val();
 
-        if (username.length === 0) {
-            showTips("请填写用户名！");
-        } else if (email.length === 0) {
+        if (email.length === 0) {
             showTips("请填写注册邮箱！");
+        } else if (username.length === 0) {
+            showTips("请填写用户名！");
         } else if (realname.length === 0) {
             showTips("请填写真实姓名！");
+        } else if (key.length === 0) {
+            showTips("请填写邀请码！");
         } else if (password.length === 0) {
             showTips("请设置登录密码！");
         } else if (passwordAgain.length === 0) {
@@ -20,7 +23,7 @@ $("input").bind('keypress', function (e) {
             showTips("两次密码不一致！");
         }
         else {
-            AccountRegister(username, email, password, realname);
+            AccountRegister(username, email, key, password, realname);
         }
     }
 })
@@ -29,15 +32,18 @@ $(".submit").click(function () {
     var username = $("input[name=username]").val();    
     var email = $("input[name=email]").val();
     var realname = $("input[name=realname]").val();
+    var key = $("input[name=key").val();
     var password = $("input[name=pass]").val();
     var passwordAgain = $("input[name=passAgain]").val();
 
-    if (username.length === 0) {
-        showTips("请填写用户名！");
-    } else if (email.length === 0) {
+    if (email.length === 0) {
         showTips("请填写注册邮箱！");
-    } else if (realname.length === 0) {
+    }else if (username.length === 0) {
+        showTips("请填写用户名！");
+    }else if (realname.length === 0) {
         showTips("请填写真实姓名！");
+    } else if (key.length === 0) {
+        showTips("请填写邀请码！");
     } else if (password.length === 0) {
         showTips("请设置登录密码！");
     } else if (passwordAgain.length === 0) {
@@ -48,7 +54,7 @@ $(".submit").click(function () {
         $("input[name=passAgain]").val("");
     }
     else {
-        AccountRegister(username, email, password, realname);
+        AccountRegister(username, email, key, password, realname);
     }
 })
 
@@ -56,23 +62,31 @@ $(".submit").click(function () {
 var host = "/api/v1";
 var next = window.location.search;
 
-function AccountRegister(username, email, password, realname) {
+function AccountRegister(username, email, key, password, realname) {
     $.ajax({
         url: host + "/user",
         type: "POST",
         data: JSON.stringify({
-            account: username,
+            username: username,
             email: email,
+            icode: key.MD5(32).MD5(32).MD5(32),
             password: password.MD5(32).MD5(32).MD5(32),
             realname: realname
         }),
         contentType: "application/json",
         dataType: "json",
         success: function (res) {
-            localStorage.setItem("userinfo", JSON.stringify({ username: res.username, email: res.email, password: password, realname: res.realname }));
+            $("button.submit").addClass("success").html("注册成功，请去邮箱查收邮件");
+            localStorage.setItem("reguser", JSON.stringify(res));
+            setTimeout(function () {
+                window.location.href = "/login";
+            }, 1000);
         },
         error: function (err) {
             showTips("注册账户失败！");
+            setTimeout(function () {
+                location.reload();
+            }, 1000);
         }
     })
 }

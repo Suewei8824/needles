@@ -163,7 +163,13 @@ $(".submit_").click(function () {
     var newpass = $("input[name=newpass]").val();
     var confirm = $("input[name=confirm]").val();
 
-    if(newpass != confirm) {
+    if(!oldpass) {
+        showTips("请输入原密码！");
+    } else if(!newpass) {
+        showTips("请输入新密码！");
+    } else if(!confirm) {
+        showTips("请再次输入密码！");
+    } else if(newpass != confirm) {
         showTips("两次密码不一致！");
         $("input[name=newpass]").val("");
         $("input[name=confirm]").val("");

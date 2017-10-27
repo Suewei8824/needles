@@ -4,7 +4,7 @@
     left: 50%;
     top: 50%;
     margin-left: -250px;
-    margin-top: -370px;
+    margin-top: -400px;
 }
 
 #video {
@@ -44,7 +44,7 @@
 .tips {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 100px;
     right: -30px;
     transform: translateX(100%);
     background-color: rgb(228, 0, 5);

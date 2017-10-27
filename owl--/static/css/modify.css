@@ -28,13 +28,11 @@
 }
 
 .container {
-    position: fixed;
+    display: flex;
     width: 700px;
     height: 510px;
-    left: 50%;
-    margin-left: -330px;
-    margin-top: 200px;
     border: 1px solid #ddd;
+    margin: 200px auto;
     border-radius: 4px;
     box-shadow: 0 1px 4px #ccc;
 }
@@ -56,21 +54,21 @@
 .wrapper {
     width: 500px;
     height: 440px;
-    float: right;
 }
 
 .userdiv {
     display: flex;
-    height: 180px;
+    height: 120px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 26px;
+    margin-top: 30px;
+    margin-left: 102px;
 }
 
 .useremail {
     width: 500px;
-    height: 60px;
     text-align: center;
 }
 
@@ -81,10 +79,9 @@
 }
 
 .profilecard, .passwordcard {
-    position: absolute;
-    top: 270px;
     width: 400px;
-    top: 34%;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 
 .desc {
